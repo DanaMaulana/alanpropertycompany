@@ -1,0 +1,25 @@
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+@mixin inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex-box($justify-content: center, $align-items: center, $flex-direction: row, $flex-wrap: nowrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin heading {
+  position: relative;
+  color: $warna-font;
+  text-transform: capitalize;
+  font-size: 3em;
+}

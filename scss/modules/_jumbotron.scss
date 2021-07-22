@@ -1,0 +1,45 @@
+@use 'mixin';
+
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+.jumbotron {
+  @include mixin.flex-box(center, center, column, nowrap);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/industry.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  .jumbotron-head {
+    font-size: 16px;
+    text-align: center;
+
+    h3 {
+      color: $warna-dasar;
+      text-transform: uppercase;
+      font-size: 3em;
+      text-shadow: -5px 5px 5px #5f5e5d;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: $warna-dasar;
+      text-transform: capitalize;
+      text-shadow: -5px 5px 5px #5f5e5d;
+    }
+  }
+
+  a {
+    margin-top: 15px;
+    font-size: 1rem;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: $warna-font;
+    background: $warna-dasar;
+  }
+}

@@ -1,0 +1,54 @@
+@use 'mixin';
+
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+.contact {
+  background: url(../img/img-contact.jpg);
+  background-size: cover;
+
+  .contact-head {
+    @include mixin.heading();
+    text-align: center;
+  }
+
+  .contact-form {
+    background: #fff;
+    max-width: 500px;
+    margin-top: 50px;
+
+    .inputBox {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        background: #e5e5e5;
+        padding: 10px 20px;
+        color: $warna-font;
+        outline: none;
+        font-size: 16px;
+        font-weight: 300;
+        resize: none;
+      }
+    }
+
+    .inputBox:last-child {
+      width: 25%;
+
+      input[type="submit"] {
+        cursor: pointer;
+        transition: .3s;
+      }
+
+      input[type="submit"]:hover {
+        background: #cccccc;
+      }
+    }
+  }
+}

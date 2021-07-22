@@ -1,0 +1,20 @@
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px;
+}
+
+body {
+  background: $warna-dasar;
+}

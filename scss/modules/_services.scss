@@ -1,0 +1,64 @@
+@use 'mixin';
+
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+.services {
+  @include mixin.flex-box(center, center, row, wrap);
+  position: relative;
+
+  .services-head {
+    @include mixin.heading();
+  }
+
+  .services-card {
+    @include mixin.flex-box(center, center, row, wrap);
+
+    .card {
+      width: 320px;
+      padding: 20px;
+      box-shadow: 0 5px 10px fade-in(rgba(0, 0, 0, 0.7), 0);
+      border-radius: 5px;
+      margin: 15px;
+      text-align: center;
+
+      .card-img-box {
+        position: relative;
+        width: 100%;
+        height: 150px;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 3px;
+          object-fit: cover;
+        }
+      }
+
+      .card-content-box {
+        padding: 15px 0 5px;
+
+        p {
+          font-weight: 300;
+          color: $warna-font;
+          text-align: center;
+        }
+      }
+
+      a {
+        color: $warna-font;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        background: $warna-background;
+      }
+    }
+  }
+}

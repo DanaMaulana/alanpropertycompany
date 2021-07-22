@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .jumbotron {
+    .jumbotron-head {
+      padding: 0 20px;
+
+      h3 {
+        font-size: 1.4em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+
+    a {
+      padding: 5px 12px;
+    }
+  }
+
+  // .about {
+  //   padding: 40px;
+  // }
+
+  footer {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+  }
+}

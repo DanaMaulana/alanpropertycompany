@@ -1,0 +1,26 @@
+@use 'mixin';
+
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+.portfolio {
+  @include mixin.flex-box(center, center, column, nowrap);
+  position: relative;
+  margin-top: 150px;
+
+  .portfolio-head {
+    @include mixin.heading();
+  }
+
+  .portfolio-image {
+    @include mixin.flex-box(center, center, row, wrap);
+
+    img {
+      max-width: 350px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+  }
+}

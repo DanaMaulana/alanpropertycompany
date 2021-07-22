@@ -1,0 +1,123 @@
+@use 'mixin';
+
+$warna-dasar: #fff;
+$warna-font: #5b5b5b;
+$warna-font2: #f2f2f2;
+$warna-background: #bbb;
+
+footer {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  background: #f8af59;
+
+  .footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    .footer-about {
+      p {
+        color: $warna-font2;
+      }
+
+      .footer-about-list {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-gap: 10px;
+
+        li {
+          list-style: none;
+
+          a {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border-radius: 5px;
+            background: #f8a444;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            text-decoration: none;
+            color: $warna-font2;
+            font-size: 20px;
+            transition: .3s;
+          }
+
+          a:hover {
+            background: #f7be7c;
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.4em;
+      font-weight: 500;
+      position: relative;
+      text-transform: capitalize;
+      color: $warna-font;
+      margin-bottom: 15px;
+    }
+
+    h3::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: #f9c891;
+    }
+  }
+
+  li {
+    @include mixin.inline-list();
+
+    a {
+      margin-bottom: 10px;
+      display: inline-block;
+      transition: .3s;
+      text-decoration: none;
+      color: $warna-font2;
+    }
+
+    a:hover {
+      color: #9c7e5b;
+    }
+  }
+
+  .footer-quicklinks {
+    position: relative;
+
+  }
+
+  .footer-contact {
+    .footer-contact-list {
+      li {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        margin-bottom: 15px;
+
+        span {
+          color: $warna-font2;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    width: 100%;
+    background: #f79e36;
+
+    p {
+      color: $warna-font2;
+      padding: 8px 10px;
+      text-align: center;
+    }
+  }
+}
